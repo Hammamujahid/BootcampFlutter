@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Tugas/Tugas10/HomeScreen.dart';
 import 'Tugas/Tugas9/Telegram.dart';
 
 void main() {
@@ -31,7 +32,8 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         primarySwatch: Colors.blue,
       ),
-      home: Telegram(),
+      //home: Telegram(),
+      home: HomeScreen(),
     );
   }
 }
