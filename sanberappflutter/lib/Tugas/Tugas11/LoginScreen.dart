@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'BottomScreen.dart';
 
 class LoginScreen extends StatelessWidget {
+  static const routeNamed = "login";
   const LoginScreen({super.key});
 
   @override
@@ -15,6 +17,16 @@ class LoginScreen extends StatelessWidget {
               "assets/img/logo.png",
               width: 80,
               height: 80,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Text(
+              "Job Finder",
+              style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xff475BD8)),
             ),
             const SizedBox(
               height: 10,
@@ -57,15 +69,17 @@ class LoginScreen extends StatelessWidget {
             Container(
               width: double.infinity,
               height: 50,
-              padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
+                color: const Color(0xff475BD8),
                 border: Border.all(
                   color: const Color(0xff475BD8),
                 ),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, BottomScreen.routeNamed);
+                  },
                   child: const Text(
                     "Login",
                     style: TextStyle(

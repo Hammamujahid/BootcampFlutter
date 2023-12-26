@@ -12,7 +12,11 @@ class _TelegramState extends State<Telegram> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Telegram"),
+        title: Text(
+          "Telegram",
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.blue,
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.all(8.0),

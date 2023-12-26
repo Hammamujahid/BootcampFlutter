@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'Tugas/Tugas10/HomeScreen.dart';
-import 'Tugas/Tugas9/Telegram.dart';
+import 'Tugas/Tugas11/LoginScreen.dart';
+import 'Tugas/Tugas11/BottomScreen.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key:key);
+  const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -33,7 +33,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home: Telegram(),
-      home: HomeScreen(),
+      initialRoute: LoginScreen.routeNamed,
+      routes: {
+        LoginScreen.routeNamed: (context) => const LoginScreen(),
+        BottomScreen.routeNamed: (context) => const BottomScreen(),
+      },
     );
   }
 }
