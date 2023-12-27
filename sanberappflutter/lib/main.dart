@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Tugas/Tugas11/LoginScreen.dart';
-import 'Tugas/Tugas11/BottomScreen.dart';
+import 'Tugas/Tugas12/get_data.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -32,12 +32,12 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         primarySwatch: Colors.blue,
       ),
-      //home: Telegram(),
-      initialRoute: LoginScreen.routeNamed,
-      routes: {
-        LoginScreen.routeNamed: (context) => const LoginScreen(),
-        BottomScreen.routeNamed: (context) => const BottomScreen(),
-      },
+      home: GetDataScreen(),
+      //initialRoute: LoginScreen.routeNamed,
+      //routes: {
+      //  LoginScreen.routeNamed: (context) => const LoginScreen(),
+      //  BottomScreen.routeNamed: (context) => const BottomScreen(),
+      //},
     );
   }
 }
